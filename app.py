@@ -10,11 +10,11 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/api')
 def home():
     return "Hello World!"
 
-@app.route('/fruit', methods=['GET', 'POST', 'PATCH'])
+@app.route('/api/fruit', methods=['GET', 'POST', 'PATCH'])
 def fruitBasket():
     fruit_name = "dragonfruit"
     if (request.method == 'GET'):
